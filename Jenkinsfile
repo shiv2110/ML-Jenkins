@@ -26,7 +26,7 @@ pipeline{
 					echo "Pushing to docker hub"
 		}	
 
-
+}
 post{
 	success {
     	mail to: 'shivanvitha21@gmail.com',
