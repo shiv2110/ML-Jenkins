@@ -25,12 +25,13 @@ pipeline{
 
 					echo "Pushing to docker hub"
 		}	
-}
+
 
 post{
 	success {
     	mail to: 'shivanvitha21@gmail.com',
       		subject: "Pipeline Updates: ${currentBuild.fullDisplayName}",
       		body: "${env.BUILD_URL} is a success"
-  	}
+  		}
+	}
 }
